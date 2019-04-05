@@ -1,22 +1,22 @@
 {
   "name": "postcss-flex-alias",
   "version": "1.0.0",
-  "description": "PostCSS plugin flex",
+  "description": "easily write flex",
   "keywords": [
     "postcss",
+    "flex",
     "postcss-flex-alias",
     "postcss-plugin",
-    "flex",
     "alias"
   ],
   "author": "tolking <qw13131wang@gmail.com>",
   "license": "MIT",
-  "repository": "tolking/postcss-flex-alias",
+  "repository": "https://github.com/tolking/postcss-flex-alias",
   "bugs": {
     "url": "https://github.com/tolking/postcss-flex-alias/issues"
   },
   "homepage": "https://github.com/tolking/postcss-flex-alias",
-  "doc": "https://ououe.com/lib/postcss-flex-alias",
+  "doc": "https://ououe.com/lib/postcss-flex-alias.html",
   "dependencies": {
     "postcss": "^6.0.16"
   },

@@ -1,6 +1,6 @@
 # PostCSS flex-alias [![Build Status][ci-img]][ci]
 
-[PostCSS] plugin adds and extends some properties
+[PostCSS] plugin easily write flex
 
 [PostCSS]: https://github.com/postcss/postcss
 [ci-img]:  https://travis-ci.org/tolking/postcss-flex-alias.svg
@@ -11,9 +11,38 @@ Click on the Documentation to learn more
 
 ## Explain
 
-**flex-[`type`][`justify-content`][`align-items`][`align-content`]**
+**display: flex-[`flex-flow`][`justify-content`][`align-items`][`align-content`]**
 
-### type
+### flex-flow
+
+- `x`: row nowrap
+- `y`: column nowrap
+- `w`: row wrap
+- `m`: column warp
+
+### justify-content
+
+- `s`: flex-start
+- `a`: space-around
+- `b`: space-between
+- `c`: center
+- `e`: flex-end
+
+### align-items
+
+- `s`: flex-start
+- `b`: baseline
+- `c`: center
+- `e`: flex-end
+- `h`: stretch
+
+### align-content
+
+- `s`: flex-start
+- `a`: space-around
+- `b`: space-between
+- `c`: center
+- `e`: flex-end
 
 
 ## Example
