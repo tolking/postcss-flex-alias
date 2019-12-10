@@ -48,13 +48,13 @@ Click on the Documentation to learn more
 ## Example
 
 ``` css
-// input
+/* input */
 .foo {
   display: flex-xcc;
 }
 ```
 ``` css
-// output
+ /* output */
 .foo {
   display: flex;
   justify-content: center;
@@ -63,14 +63,14 @@ Click on the Documentation to learn more
 ```
 ---
 
-``` js
-// input
+``` css
+ /* input */
 .foo {
   display: flex-wbc;
 }
 ```
 ``` css
-// output
+/* output */
 .foo {
   display: flex;
   flex-wrap: wrap;

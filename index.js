@@ -1,14 +1,15 @@
-const postcss = require('postcss');
-const flex = require('./lib/flex');
+const postcss = require('postcss')
 
-module.exports = postcss.plugin('postcss-propro',  opts => {
-  	return (root, result) => {
-        root.walkRules(rule => {
-            rule.walkDecls(decl => {
-                decl.prop === 'display' &&
-                decl.value.startsWith('flex-') &&
-                flex(decl, opts, result);
-            });
-        });
-  	};
-});
+const flex = require('./lib/flex')
+
+module.exports = postcss.plugin('postcss-flex-alias', (opts = { }) => {
+  return (root, result) => {
+    root.walkRules(rule => {
+      rule.walkDecls(decl => {
+        decl.prop === 'display' &&
+        decl.value.startsWith('flex-') &&
+        flex(decl, opts, result)
+      })
+    })
+  }
+})

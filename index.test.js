@@ -1,32 +1,30 @@
-var postcss = require('postcss');
-var plugin = require('./');
+const postcss = require('postcss')
 
-function run(input, output, opts) {
-    return postcss([ plugin(opts) ])
-        .process(input)
-        .then(result => {
-            expect(result.css).toEqual(output);
-            expect(result.warnings().length).toBe(0);
-        });
+const plugin = require('./')
+
+async function run (input, output, opts) {
+  let result = await postcss([plugin(opts)]).process(input, { from: undefined })
+  expect(result.css).toEqual(output)
+  expect(result.warnings()).toHaveLength(0)
 }
 
-it('flex-x', function () {
-    return run(
-        '.a { display: flex-x }',
-        '.a { display: flex }'
-    );
-});
+it('flex-x', async () => {
+  await run(
+    '.a { display: flex-x }',
+    '.a { display: flex }'
+  )
+})
 
-it('flex-wbc', function () {
-    return run(
-        '.a { display: flex-wb }',
-        '.a { display: flex; flex-wrap: wrap; justify-content: space-between }'
-    );
-});
+it('flex-wbc', async () => {
+  await run(
+    '.a { display: flex-wb }',
+    '.a { display: flex; flex-wrap: wrap; justify-content: space-between }'
+  )
+})
 
-it('flex-xcc', function () {
-    return run(
-        '.a { display: flex-xcc }',
-        '.a { display: flex; justify-content: center; align-items: center }'
-    );
-});
+it('flex-xcc', async () => {
+  await run(
+    '.a { display: flex-xcc }',
+    '.a { display: flex; justify-content: center; align-items: center }'
+  )
+})
